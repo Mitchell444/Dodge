@@ -6,4 +6,9 @@ public class Enemy {
     pos = new PVector(x,y);
     vel = new PVector(SPEED,SPEED);
   }
+  
+  public void show(){
+    rect(pos.x,pos.y,SIZE, SIZE);
+    
+  }
 }
