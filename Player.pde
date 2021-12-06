@@ -1,4 +1,5 @@
 public class Player {
+  private int x,y;
   private PVector pos;
   private int hp;
   private final int SIZE = 40;
@@ -6,6 +7,8 @@ public class Player {
   public Player(int x, int y){
     pos = new PVector(x,y);
     hp = 1;
+    this.x = x;
+    this.y = y;
   }
   
   public void show(){
