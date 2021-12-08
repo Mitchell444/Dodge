@@ -17,14 +17,14 @@ public class Enemy {
   }
   
   public void chase(Player p){
-  ax = map((x-p.x), 400,-400, SPEED*-0.01, SPEED *0.01); 
-  ay = map((y-p.y), 400,-400, SPEED*-0.01, SPEED *0.01);
-  vx += ax;
+  ax = map((pos.x-p.x), 400,-400, SPEED*-0.005, SPEED *0.005); 
+  ay = map((pos.y-p.y), 400,-400, SPEED*-0.005, SPEED*0.005 );
+  vx += ax; //<>//
   vy += ay;
   }
   
   public void move(){
-    x += vx;
-    y += vy;
+    pos.x += vx;
+    pos.y += vy;
   }
 }

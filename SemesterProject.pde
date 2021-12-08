@@ -10,6 +10,7 @@ public void setup(){
 public void draw(){
   background(200);
   player.show();
+  player.move();
   for(int i = 0; i < enemies.length; i++){
    player.collides(enemies[i]);
    enemies[i].move();

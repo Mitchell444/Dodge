@@ -5,7 +5,7 @@ public class Player {
   private final int SIZE = 40;
   
   public Player(int x, int y){
-    pos = new PVector(x,y);
+    pos = new PVector(mouseX,mouseY);
     hp = 1;
     this.x = x;
     this.y = y;
@@ -30,5 +30,10 @@ public class Player {
    textAlign(CENTER, CENTER);
    textSize(48);
    text("YOU LOSE!", width/2, height/2);
+  }
+  
+  private void move(){
+    x = mouseX;
+    y = mouseY;
   }
 }
