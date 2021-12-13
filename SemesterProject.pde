@@ -1,5 +1,5 @@
 Player player;
-Enemy[] enemies = new Enemy[20];
+Enemy[] enemies = new Enemy[30];
 
 public void setup(){
   player = new Player(mouseX, mouseY);
@@ -16,11 +16,23 @@ public void draw(){
    enemies[i].move();
    enemies[i].show(); 
    enemies[i].chase(player);
+   for(int j = 0; j < enemies.length; j++){
+     if(enemies[i].active){
+     //enemies[i].collide(enemies[j]);
+     }
+   }
   }
-
 }
-private void spawnEnemies(){
+
+
+private void spawnEnemies(){ //<>//
   for (int i = 0; i < enemies.length; i++){
     enemies[i] = new Enemy((int)(Math.random()*800),(int)(Math.random()*800));
   }
-}
+} //<>//
+  private void mouseClicked(Player p){
+    if (p.rActive = true && mouseX >= 275 && mouseX <= 525 && mouseY >= 130 && mouseY <= 205){
+      p.rActive = false;
+      p.hp = 1;
+    }
+  }
