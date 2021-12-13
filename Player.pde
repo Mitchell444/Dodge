@@ -8,6 +8,7 @@ public class Player {
   public Player(int x, int y){
     pos = new PVector(mouseX,mouseY);
     hp = 1;
+    rActive = false;
     //this.x = x;
     //this.y = y;
   }

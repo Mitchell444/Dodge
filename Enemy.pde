@@ -30,7 +30,7 @@ public class Enemy {
     pos.y += vy;
   }
   
-  /**public void collide(){
+  public void collide(Enemy e){
      double dist = PVector.sub(this.pos,e.pos).mag();
     if (dist <= this.SIZE / 2 + e.SIZE / 2){
       hp--;
@@ -38,5 +38,6 @@ public class Enemy {
       if(hp <=0){
         active = false;
       }
-    }*/
+    }
+}
 }

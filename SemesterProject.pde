@@ -14,11 +14,13 @@ public void draw(){
   for(int i = 0; i < enemies.length; i++){
    player.collides(enemies[i]);
    enemies[i].move();
+   if(enemies[i].active){
    enemies[i].show(); 
+   }
    enemies[i].chase(player);
-   for(int j = 0; j < enemies.length; j++){
+   for(int j = 30; j < enemies.length; j++){
      if(enemies[i].active){
-     //enemies[i].collide(enemies[j]);
+     enemies[i].collide(enemies[j]);
      }
    }
   }
@@ -31,8 +33,10 @@ private void spawnEnemies(){ //<>//
   }
 } //<>//
   private void mouseClicked(Player p){
+    
     if (p.rActive = true && mouseX >= 275 && mouseX <= 525 && mouseY >= 130 && mouseY <= 205){
       p.rActive = false;
       p.hp = 1;
+      
     }
   }
